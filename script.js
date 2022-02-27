@@ -5,7 +5,6 @@
 const apiUrl = "https://randomuser.me/api/?";
 const listElm = document.querySelector("#user-list");
 let usrArgs = [];
-let countUsersFound = 0;
 
 const displayUsers = users => {
     console.log(users)
@@ -70,8 +69,6 @@ const handleOnSearch = e => {
     const filteredArgs = usrArgs.filter(item => {
         const userFullName = (item.name.first + " " + item.name.last).toLowerCase();
         if (userFullName.includes(str)){
-            // countUsersFound++;
-            // console.log(countUsersFound);
             return item;
         }
     })
